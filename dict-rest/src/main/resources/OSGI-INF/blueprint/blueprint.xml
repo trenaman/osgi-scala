@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<blueprint
+    xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
+    xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+                         http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/jaxrs.xsd">
+
+  <reference id="dictionaryService"
+                interface="org.adehaus.osgi_scala.dict.Dict"
+                timeout="30000"
+                availability="mandatory"/>
+
+  <jaxrs:server id="dictionary" address="/">
+    <jaxrs:serviceBeans>
+      <bean class="org.adehaus.osgi_scala.rest.RestfulDictionary">
+        <property name="dictionary" ref="dictionaryService"/>
+      </bean>
+    </jaxrs:serviceBeans>
+  </jaxrs:server>
+
+</blueprint>

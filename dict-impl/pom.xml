@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>osgi-scala</artifactId>
+    <groupId>org.adehaus</groupId>
+    <version>1.0.0</version>
+  </parent>
+  <groupId>org.adehaus</groupId>
+  <artifactId>dict-impl</artifactId>
+  <version>1.0.1</version>
+  <name>dict-impl</name>
+  <url>http://maven.apache.org</url>
+  <packaging>bundle</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <export.packages></export.packages>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.adehaus</groupId>
+      <artifactId>dict-api</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+  </dependencies>
+
+</project>
